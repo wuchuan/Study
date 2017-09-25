@@ -32,15 +32,15 @@ def simple_reply(msg):
     elif msg in 'normal':
         mode='normal'
         return
-    print(mode)
+   # print(mode)
     if mode in 'cmd':
-	print(msg)
+	    print(msg)
         if msg in 'wakeonlan':
             mode_cmd('wakeonlan 40:8d:5c:bc:52:7d')
-            return 'wakeonlan'          
+            return 'wakeonlan'
         if msg in 'off':
 	    mode_cmd('echo . | sudo -S pm-suspend')
-	    return 'Computer is off' 
+	    return 'Computer is off'
 
         return mode_cmd(msg)
 
