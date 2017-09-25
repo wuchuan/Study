@@ -32,9 +32,9 @@ def simple_reply(msg):
     elif msg in 'normal':
         mode='normal'
         return
-   # print(mode)
+    print(mode)
     if mode in 'cmd':
-	    print(msg)
+	print(msg)
         if msg in 'wakeonlan':
             mode_cmd('wakeonlan 40:8d:5c:bc:52:7d')
             return 'wakeonlan'
